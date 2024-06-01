@@ -11,8 +11,14 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+export interface Env{
+	
+}
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('Hello World!');
+		// return new Response('Hello World!');
+		return Response.json({
+			message: "you didn't sent a request"
+		});
 	},
 };
